@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booleans</title>
+</head>
+<body>
+  <script>
+    // true
+    // false
+
+    // console.log(8 < 5);
+
+    // console.log(5 === '5');
+    // console.log(5 == '5');
+    // console.log(3 > 5 - 5); //arithmetic operators has higher priority than comparison operator. so true
+    // !=
+    // !==
+
+
+    // if(false) {
+    //   console.log('hello');
+    // }
+    // else {
+    //   console.log('hii');
+    // }
+
+    // const age = 20;
+
+    // if(age >= 16) {
+    //   console.log('You can drive');
+    //   console.log('Congrats');
+    // }
+    // else if(age >= 14) {
+    //   console.log('You are almost of the age');
+    // }
+    // else {
+    //   console.log('You cannot drive');
+    // }
+
+    // if(10) {
+    //   console.log('truthy');
+    // }
+
+    // const cartQuantity = 1;
+
+    // if(cartQuantity) {
+    //   console.log('Cart has products');
+    // }
+
+    // console.log(!0);
+
+
+    // console.log('text' / 5); //NaN example
+     
+    // let variable1;
+    // console.log(variable1);
+
+    // const variable2 = 10;
+    // console.log(variable2);
+
+    //Ternary operator
+    const result = 0 ? 'truthy' : 'falsy'; 
+    console.log(result);
+
+    //Short-circuit evaluation
+    false && console.log('Hello');
+    true && console.log('Hello');
+
+    const message = true && 'Hello';
+    const message2 = false && 'Hello';//&& can be used as an if statement if true second value is stored inside variable if false false itself is stored inside variable. && is also called guard operator.
+    console.log(message);
+    console.log(message2);
+
+    false || console.log('Hello');
+    true || console.log('Hello');
+
+    const message3 = true || 'Hello'; //default operator
+    const message4 = false || 'Hello';
+    console.log(message3);
+    console.log(message4);
+
+
+    //example if we want to choose a currency
+    const currency = 'EUR' || 'USD';
+    console.log(currency);
+
+    const currency2 = undefined || 'USD';
+    console.log(currency2);
+
+  </script>
+</body>
+</html>

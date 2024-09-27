@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  <script>
+    /*
+    function function1() {
+      console.log('Hello');
+      console.log(2 + 2);
+    }
+
+    function1();
+    */
+
+    function calculateTax(cost, taxPercent) {
+      console.log(taxPercent); //undefined
+      console.log(cost * taxPercent);  //5000 * undefined = NaN
+    }
+    calculateTax(2000, 0.2);
+    calculateTax(5000);
+
+    //function calculateTax(cost, taxPercent = 0.1) //default value for a parameter. so if we dont pass a value as an argument this default value will be used instead
+  </script>
+</body>
+</html>

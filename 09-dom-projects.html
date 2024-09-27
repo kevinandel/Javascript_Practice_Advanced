@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Projects</title>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+  <input placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeyDown(event)">
+  <button onclick="calculateTotal()">Calculate</button>
+  <p class="js-total-cost"></p>
+  <!--onkeydown,onclick,onscroll,onmouseneter,onmouseleave are all eventlisteners and keydown,scroll..... are events-->
+
+  <script>
+    //window object represents browser whereas document represents webpage.ie document object is inside window 
+    
+    window.document; //same as normal document
+    window.console.log('window'); //same as console
+    window.alert //document,console and alert are part of browser and we dont have to type window. specifically as it is added by javascript automatically default
+    
+    
+/*
+    console.log(typeof String(25)); //String() function to covert integer into a string
+    console.log('25' - 5); //If a string only contains a number it converts it into a number but adding works differently
+    console.log('25' + 5); //output is 255
+*/    
+
+    function handleCostKeyDown(event) {
+      if(event.key === 'Enter') {
+        calculateTotal();
+     }
+    }
+
+    function calculateTotal() {
+      const inputElement = (document.querySelector('.js-cost-input'));
+      let cost = Number(inputElement.value); //here 'value' returns a string by default so we have to convert it into an integr we can either use a plus operator(eg:+inputElement.value) or use parseInt(eg:parseInt(inputElement.value)) or use Number() (eg:Number(inputElement.value))
+
+      if(cost < 40) {
+        cost = cost + 10;
+      }
+
+      document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+
+    }
+
+
+    function subscribe() {
+      const buttonElement = (document.querySelector('.js-subscribe-button'));
+
+      if(buttonElement.innerHTML === 'Subscribe') { //innerHTML tends to take the spaces around the html content too if Subscribe had some spaces around it so we use innerText so that it only takes the text inside the button
+        buttonElement.innerHTML = 'Subscribed';
+      }
+      else {
+        buttonElement.innerHTML = 'Subscribe';
+      }
+    }
+
+  </script> 
+</body>
+</html>

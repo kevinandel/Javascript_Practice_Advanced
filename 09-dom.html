@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="js-button">Second button</button>
+
+  <script>
+    console.log(document.querySelector('button').innerHTML); //gets first button element from the page and puts it inside our javascript
+
+    document.querySelector('button').innerHTML = 'String Changed';
+    console.log(document.querySelector('button').innerHTML);
+
+    console.log(document.querySelector('.js-button')); //to select a specific button 
+
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+
+    /*
+    console.log(document.title);
+    document.title = 'Changed';
+
+    console.log(document.body); //DOM combines html and javascript together
+    console.log(typeof document.body);
+
+    console.log(document.body.innerHTML); //gives access to whole of html code
+
+    // document.body.innerHTML = 'Changed';
+    document.body.innerHTML = '<button>Good job!</button>'
+    */
+
+    /*
+    document.body.innerHTML = 'hello'; //replaces everything on the webpage simply with hello
+    document.title = 'doom'; //document object models the webpage
+    */
+  </script> 
+</body>
+</html>

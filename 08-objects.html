@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>objects</title>
+</head>
+<body>
+  <script>
+    /*
+    const product = {
+      name: 'socks',
+      price: 1090
+    };
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+
+    product.name = 'shirt';
+    console.log(product);
+    console.log(product.name);
+    console.log(product.nigga);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(product);
+
+    console.log(typeof product);
+    */
+
+    /*
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day',
+      rating: {  //nested objects
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1() {
+        console.log('function inside an object'); //function inside an object is called method 
+      }
+    };
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']); //bracket notation
+    //console.log(product2.delivery-time); //this will be an error in this case we use bracket notation as js will think - is a minus
+    console.log(product2['delivery-time']); //we can use variable inside bracket notation [variable1] and calculations ['var1' + 'var2']
+
+    console.log(product2.rating.stars);
+
+    console.log(product2.fun); //console is an object(built-in object) provided by javascript and log is a function inside the object
+    product2.fun();
+
+    console.log(typeof console);
+    console.log(typeof console.log);
+
+    console.log(JSON.stringify(product2)); //we can see that the function that we created is not in JSON as JSON doesnt support functions.
+    console.log(typeof JSON.stringify(product2)); //string
+
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+
+    //variables are temporary if we refresh the page all of them are deleted. localStorage gives a more permanent like storage 
+    */
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase()); //javascript has a property called auto-boxing javascript automatically wraps the string inside an object and hence that string acts jut like an object
+
+    console.log(3.0.toString());
+    console.log(true.toString());
+
+    /*
+    console.log(null.toString()); //error
+    console.log(undefined.toString()); //error
+    */
+
+    const object1 = {
+      message: 'hello'
+    };
+    console.log(object1);
+    const object2 = object1; //object1 is not a variable but a reference to the place where the values message:'hello' is stored so as we store object1 to object2 when we change object2 the value inside object1 also changes.This is called copy by reference.here both the object1 and object2 points to same place in computers memory
+
+    object1.message = 'Good job!';
+    console.log(object1); //here we were able to change object1 eventhough it was created with const.its because its a reference to actual value. ie const prevents us from changing the reference itself but it allows us to reach inside the reference to the actual value
+
+    console.log(object2); //'Good job'
+
+    const object3 = {
+      message: 'Good job!'
+    };
+
+    console.log(object3 === object1); //this code compares the references not the actual values inside. And both are different references.\
+
+    console.log(object2 === object1); //both refers to the same place
+
+    console.log(object3.message === object1.message);  //true as the values inside both message is same
+
+    const object4 = {
+      message: 'Good job!',
+      price: 799
+    };
+
+    // const message = object4.message;
+    const { message, price } = object4;  //same as the code in the above line and this is called destructuring. and these curly brace technique is a destructuring shortcut
+    console.log(message);
+    console.log(price);
+
+    const object5 = { //here on the rhs is the variable and it is assigned to the key on the left
+      message,
+      // message: message, //this is same as the above line
+      price: price,
+      // method: function function1() {
+      //   console.log('method');
+      // } same as below, but the one below is shortcut
+      method() {
+        console.log('method');
+      }
+    };
+
+    console.log(object5);
+    object5.method();
+  </script>
+</body>
+</html>
